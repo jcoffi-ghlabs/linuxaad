@@ -1,0 +1,12 @@
+Source: linuxaad
+Section: libs
+Priority: optional
+Maintainer: Justin Coffi <justin.coffi@ghlabs.com>
+Build-Depends: debhelper (>= 11), gcc, libpam0g-dev, libcurl4-openssl-dev, libjansson-dev, checkpolicy, policycoreutils
+Standards-Version: 4.1.3
+Homepage: https://github.com/jcoffi-ghlabs/linuxaad
+
+Package: linuxaad
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, policycoreutils
+Description: Libraries for pam and nss to use Azure Active Directory for directory and authentication services.

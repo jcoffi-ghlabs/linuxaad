@@ -1,0 +1,13 @@
+Package: linuxaad-dbgsym
+Package-Type: ddeb
+Source: linuxaad
+Version: 0.3.1-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Justin Coffi <justin.coffi@ghlabs.com>
+Installed-Size: 32
+Depends: linuxaad (= 0.3.1-1)
+Section: debug
+Priority: optional
+Description: debug symbols for linuxaad
+Build-Ids: 328ae5091cbcf94584fb0116ed161e1e609a0f0d efecf00f458ec900e523cc101ef229635eb19bfd

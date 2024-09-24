@@ -1,0 +1,6 @@
+libnss_aad/.libs/libnss_aad.so.2.0 usr/lib/x86_64-linux-gnu/libnss_aad.so.2.0
+pam_aad/.libs/pam_aad.so usr/lib/x86_64-linux-gnu/security/pam_aad.so
+libnss_aad/parameters.json.example etc/azuread/parameters.json.example
+pam_aad/pam_aad.pp usr/share/selinux/packages/pam_aad.pp
+pam_aad/pam_aad.te usr/share/selinux/packages/pam_aad.te
+rpms/enable_libnss_pam_aad.sh usr/sbin/enable_libnss_pam_aad.sh

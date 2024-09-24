@@ -1,0 +1,52 @@
+# Compiled object files
+*.o
+*.so
+
+# Compiled dynamic libraries
+.libs/
+*.mod
+*.pp
+
+# Build directories
+build/
+debian/linuxaad/
+
+# Build artifacts for Debian packages
+*.deb
+*.dsc
+*.changes
+*.build
+*.tar.gz
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Dependencies
+*.d
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# IDE/Editor-specific files (if applicable)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.DS_Store
+
+# Git-specific files
+.git/
+#.gitignore
+
+# Makefile output
+Makefile.in
+Makefile
+config.log
+config.status
+
+# Python virtual environment (if any)
+venv/
+.env/

@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_auto_build:
+	cd pam_aad && make
+	cd pam_aad && checkmodule -M -m -o pam_aad.mod pam_aad.te
+	cd pam_aad && semodule_package -o pam_aad.pp -m pam_aad.mod
+	cd libnss_aad && make
+
+override_dh_auto_install:
+	mkdir -p $(DESTDIR)/usr/lib/x86_64-linux-gnu/security
+	install pam_aad/.libs/pam_aad.so $(DESTDIR)/usr/lib/x86_64-linux-gnu/security/
+	mkdir -p $(DESTDIR)/usr/lib/x86_64-linux-gnu
+	install libnss_aad/.libs/libnss_aad.so.2.0 $(DESTDIR)/usr/lib/x86_64-linux-gnu/libnss_aad.so.2.0
+	mkdir -p $(DESTDIR)/etc/azuread
+	install libnss_aad/parameters.json.example $(DESTDIR)/etc/azuread/
+	mkdir -p $(DESTDIR)/usr/share/selinux/packages
+	install pam_aad/pam_aad.pp $(DESTDIR)/usr/share/selinux/packages/
+	install pam_aad/pam_aad.te $(DESTDIR)/usr/share/selinux/packages/
+	mkdir -p $(DESTDIR)/usr/sbin
+	install rpms/enable_libnss_pam_aad.sh $(DESTDIR)/usr/sbin/enable_libnss_pam_aad.sh
+	chmod 700 $(DESTDIR)/usr/sbin/enable_libnss_pam_aad.sh
