@@ -2,7 +2,7 @@ Source: linuxaad
 Section: libs
 Priority: optional
 Maintainer: Justin Coffi <justin.coffi@ghlabs.com>
-Build-Depends: debhelper (>= 11), gcc, libpam0g-dev, libcurl4-openssl-dev, libjansson-dev, checkpolicy, policycoreutils
+Build-Depends: debhelper (>= 11), gcc, libpam0g-dev, libcurl4-openssl-dev, libjansson-dev, checkpolicy, policycoreutils, dpkg-dev, build-essential, devscripts
 Standards-Version: 4.1.3
 Homepage: https://github.com/jcoffi-ghlabs/linuxaad
 
